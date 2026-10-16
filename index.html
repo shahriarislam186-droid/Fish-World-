@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a2f">
+  <title>Fish World | Fresh Fish</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#home" class="logo">
+      🐟 FISH <span>WORLD</span>
+    </a>
+
+    <nav>
+      <a href="#home">হোম</a>
+      <a href="#products">মাছ কিনুন</a>
+      <a href="#order">অর্ডার</a>
+    </nav>
+
+    <a href="#order" class="cart-button">
+      🛒 কার্ট <span id="cartCount">0</span>
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="subtitle">FRESH FISH • TRUSTED SERVICE</p>
+
+      <h1>
+        তাজা মাছ,<br>
+        <span>আপনার ঘরে।</span>
+      </h1>
+
+      <p class="hero-description">
+        আপনার পছন্দের মাছ বেছে নিন।
+        পরিমাণ নির্ধারণ করুন এবং সহজেই অর্ডার করুন।
+        আমরা খুলনা শহরে ডেলিভারি দিই।
+      </p>
+
+      <a href="#products" class="primary-button">
+        মাছ কিনুন →
+      </a>
+
+      <div class="hero-info">
+        <span>✓ সহজ অর্ডার</span>
+        <span>✓ ওজন অনুযায়ী দাম</span>
+        <span>✓ ডেলিভারি ৳৬০</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="fish-circle">🐟</div>
+      <div class="floating-card">
+        <strong>Fish World</strong>
+        <p>Fresh Fish, Fresh Life</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature">
+      <span>❄️</span>
+      <h3>তাজা মাছ</h3>
+      <p>সতেজতার প্রতি যত্ন</p>
+    </div>
+
+    <div class="feature">
+      <span>⚖️</span>
+      <h3>ওজন নির্বাচন</h3>
+      <p>নিজের প্রয়োজনমতো</p>
+    </div>
+
+    <div class="feature">
+      <span>💰</span>
+      <h3>সহজ হিসাব</h3>
+      <p>দাম দেখুন সঙ্গে সঙ্গে</p>
+    </div>
+
+    <div class="feature">
+      <span>🚚</span>
+      <h3>হোম ডেলিভারি</h3>
+      <p>খুলনা, বাংলাদেশ</p>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section" id="products">
+    <div class="section-heading">
+      <p class="subtitle">OUR FISH COLLECTION</p>
+      <h2>আমাদের <span>মাছের বাজার</span></h2>
+      <p>পছন্দের মাছ বেছে নিয়ে পরিমাণ নির্ধারণ করুন।</p>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- মাছের কার্ড JavaScript দিয়ে আসবে -->
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section class="order-section" id="order">
+    <div class="section-heading">
+      <p class="subtitle">YOUR ORDER</p>
+      <h2>আপনার <span>অর্ডার</span></h2>
+      <p>আপনার তথ্য দিয়ে অর্ডার সম্পন্ন করুন।</p>
+    </div>
+
+    <div class="order-layout">
+
+      <!-- Cart -->
+      <div class="cart-panel">
+        <h3>🛒 আপনার কার্ট</h3>
+
+        <div id="cartItems">
+          <p class="empty-cart">
+            আপনার কার্ট এখন খালি।
+          </p>
+        </div>
+
+        <div class="total-box">
+          <p>
+            মাছের দাম
+            <strong id="subtotal">৳০</strong>
+          </p>
+
+          <p>
+            ডেলিভারি চার্জ
+            <strong id="deliveryFee">৳৬০</strong>
+          </p>
+
+          <p class="grand-total">
+            সর্বমোট
+            <strong id="grandTotal">৳৬০</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Customer Form -->
+      <form id="orderForm" class="customer-form">
+        <h3>ডেলিভারির তথ্য</h3>
+
+        <label for="customerName">আপনার নাম *</label>
+        <input
+          type="text"
+          id="customerName"
+          name="name"
+          placeholder="আপনার পুরো নাম"
+          required
+        >
+
+        <label for="customerPhone">মোবাইল নম্বর *</label>
+        <input
+          type="tel"
+          id="customerPhone"
+          name="phone"
+          placeholder="01XXXXXXXXX"
+          pattern="01[3-9][0-9]{8}"
+          required
+        >
+
+        <label for="customerAddress">ডেলিভারি ঠিকানা *</label>
+        <textarea
+          id="customerAddress"
+          name="address"
+          placeholder="আপনার সম্পূর্ণ ঠিকানা"
+          required
+        ></textarea>
+
+        <label for="paymentMethod">পেমেন্ট পদ্ধতি *</label>
+        <select id="paymentMethod" name="payment" required>
+          <option value="Cash on Delivery">
+            Cash on Delivery
+          </option>
+          <option value="bKash">bKash</option>
+          <option value="Nagad">Nagad</option>
+          <option value="Bank Transfer">Bank Transfer</option>
+        </select>
+
+        <label for="customerNote">
+          অতিরিক্ত নির্দেশনা (ঐচ্ছিক)
+        </label>
+        <textarea
+          id="customerNote"
+          name="note"
+          placeholder="বিশেষ কোনো নির্দেশনা থাকলে লিখুন"
+        ></textarea>
+
+        <button type="submit" class="primary-button submit-button">
+          অর্ডার করুন →
+        </button>
+
+        <p class="form-message" id="formMessage"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#home" class="logo">
+      🐟 FISH <span>WORLD</span>
+    </a>
+
+    <p>তাজা মাছ, আপনার ঘরে।</p>
+    <p>📍 খুলনা, বাংলাদেশ</p>
+    <p>📞 01999988888</p>
+
+    <p class="copyright">
+      © <span id="year"></span> Fish World. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
